@@ -116,6 +116,10 @@ result=$(az deployment group create\
 	--parameters $params)
 printf "Result of ARM deployment:\n $result \n"
 
+# Remove double-quotes in key
+textKey=$(sed -e 's/^"//' -e 's/"$//' <<<"$textKey")
+speechKey=$(sed -e 's/^"//' -e 's/"$//' <<<"$speechKey")
+
 # Create environment file 
 printf "${grn}Writing out environment variables...${end}\n"
 configFile='variables.env'

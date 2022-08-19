@@ -40,6 +40,9 @@ printf "${grn}Retrieve the keys and endpoint of the text analytics resource...${
 Key=$(az cognitiveservices account keys list -g $resourcegroup --name $textanalyticsservice --query "key1")
 Endpoint=$(az cognitiveservices account show -g $resourcegroup --n $textanalyticsservice --query "properties.endpoint")
 
+# Remove double-quotes in key
+Key=$(sed -e 's/^"//' -e 's/"$//' <<<"$Key")
+
 # Create environment file 
 printf "${grn}Writing out environment variables...${end}\n"
 configFile='variables.env'
