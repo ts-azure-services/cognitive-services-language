@@ -18,7 +18,7 @@ az account set -s $sub_id
 number=$[ ( $RANDOM % 10000 ) + 1 ]
 resourcegroup='cs'$number
 textanalyticsservice='cs'$number'text'
-location='westus2'
+location='eastus'
 
 printf "${grn}Starting creation of the resource group...${end}\n"
 rgCreate=$(az group create --name $resourcegroup --location $location)

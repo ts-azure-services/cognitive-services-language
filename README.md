@@ -5,6 +5,8 @@ summarization. For each capability, have a default sample, but can also add free
 file with a number of statements.
 - For the ingestion client, refer the following guide: https://github.com/Azure-Samples/cognitive-services-speech-sdk/blob/master/samples/ingestion/ingestion-client/Setup/guide.md)
 
+- Custom text classification example: https://github.com/Azure/azure-sdk-for-python/blob/main/sdk/textanalytics/azure-ai-textanalytics/samples/sample_multi_label_classify.py
+
 ## Resources
 
 ```python
